@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your professional journey with a sleek, responsive portfolio website designed for personal branding, featuring sections for skills, projects, and contact.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
