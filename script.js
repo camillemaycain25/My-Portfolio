@@ -158,8 +158,16 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
+  const name = form.elements.name.value.trim();
+  const email = form.elements.email.value.trim();
+  const subject = form.elements.subject.value.trim();
+  const message = form.elements.message.value.trim();
+  const emailBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+  const mailtoUrl = `mailto:camillemaycain25@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
   formStatus.textContent =
-    "Your message is ready, but this form is not connected to a sending service yet. Please contact Camille directly once an email address is added.";
+    "Your email app should open with your message. If it does not, email Camille directly at camillemaycain25@gmail.com.";
+  window.location.href = mailtoUrl;
 });
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();

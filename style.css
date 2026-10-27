@@ -1090,6 +1090,7 @@ ul {
   .project-card:last-child {
     grid-column: 1 / -1;
     width: calc(50% - 0.75rem);
+    margin-inline: auto;
   }
 }
 
