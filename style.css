@@ -688,6 +688,32 @@ ul {
   background: var(--light-grey);
 }
 
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.project-image::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2),
+    transparent 34%,
+    transparent 68%,
+    rgba(0, 0, 0, 0.12)
+  );
+  content: "";
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.035);
+}
+
 .project-image > span {
   position: absolute;
   z-index: 2;
@@ -696,62 +722,6 @@ ul {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.62rem;
   letter-spacing: 0.1em;
-}
-
-.project-shape {
-  position: absolute;
-  transition: transform 450ms ease;
-}
-
-.project-card:hover .project-shape {
-  transform: scale(1.05) rotate(2deg);
-}
-
-.project-image-one {
-  background: #222;
-}
-
-.project-image-one .project-shape {
-  inset: 19% 19%;
-  border: 1px solid #777;
-  background: linear-gradient(135deg, #4c4c4c 50%, #171717 50%);
-}
-
-.project-image-two {
-  background: #d8d8d8;
-}
-
-.project-image-two .project-shape {
-  top: 18%;
-  left: 27%;
-  width: 48%;
-  aspect-ratio: 1;
-  border: 1.5rem solid #333;
-  border-radius: 50%;
-}
-
-.project-image-two > span {
-  color: var(--medium-grey);
-}
-
-.project-image-three {
-  background:
-    repeating-linear-gradient(90deg, transparent 0 14%, rgba(255, 255, 255, 0.12) 14% 14.5%),
-    #555;
-}
-
-.project-image-three .project-shape {
-  right: -10%;
-  bottom: -38%;
-  width: 82%;
-  aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  transform: rotate(35deg);
-  background: #282828;
-}
-
-.project-card:hover .project-image-three .project-shape {
-  transform: scale(1.05) rotate(37deg);
 }
 
 .project-content {
