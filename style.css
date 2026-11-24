@@ -363,46 +363,12 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.portrait-placeholder {
-  position: relative;
-  display: flex;
+.portrait-image {
+  display: block;
+  width: 100%;
   aspect-ratio: 4 / 5;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 37%, #5e5e5e 0 12%, transparent 12.5%),
-    radial-gradient(ellipse at 50% 105%, #464646 0 47%, transparent 47.5%),
-    linear-gradient(145deg, #2f2f2f, #181818);
-}
-
-.portrait-placeholder::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, 0.06), transparent 65%);
-  content: "";
-}
-
-.portrait-placeholder > span {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  color: rgba(255, 255, 255, 0.12);
-  font-size: 5rem;
-  font-weight: 800;
-  letter-spacing: -0.09em;
-}
-
-.portrait-placeholder p {
-  position: absolute;
-  bottom: 1.75rem;
-  left: 1.75rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  line-height: 1.5;
-  text-transform: uppercase;
+  object-fit: cover;
+  object-position: center;
 }
 
 .portrait-caption {
